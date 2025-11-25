@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f5f7;
+  margin: 0;
+  padding: 30px;
+}
+
+.content_main {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.gender {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gender label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.gender .gender-label {
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.gender input[type="checkbox"] {
+  position: relative;
+  width: 60px;
+  height: 25px;
+  appearance: none;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 2px solid #1b7dbb;
+  background-color: #249be5;
+  transition: 0.3s;
+}
+
+.gender input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid #bab5b5;
+  transition: 0.3s;
+}
+
+.gender input[type="checkbox"]:checked {
+  background-color: #ff66b2;
+  border-color: #e44f98;
+}
+
+.gender input[type="checkbox"]:checked::after {
+  transform: translateX(35px);
+}
+
+.gender input[type="checkbox"]:checked ~ .male {
+  opacity: 0.3;
+}
+
+.gender input[type="checkbox"]:checked ~ .female {
+  opacity: 1;
+}
+
+.gender .male {
+  opacity: 1;
+}
+
+.gender .female {
+  opacity: 0.3;
+}
+
+button {
+  padding: 10px 25px;
+  background-color: #249be5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #1a7ec2;
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.character {
+  width: 25%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.character p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.block_male {
+    border: solid 1px #1a7ec2;
+}
+
+.block_female {
+    border: solid 1px #e44f98;
+}
